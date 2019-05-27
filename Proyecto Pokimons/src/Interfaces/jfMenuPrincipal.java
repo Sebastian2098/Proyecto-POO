@@ -34,7 +34,7 @@ public class jfMenuPrincipal extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        Masculino = new javax.swing.JComboBox<>();
+        genero = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Pokimon GO");
@@ -54,11 +54,11 @@ public class jfMenuPrincipal extends javax.swing.JFrame {
 
         jLabel3.setText("Sexo:");
 
-        Masculino.setEditable(true);
-        Masculino.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hombre", "Mujer" }));
-        Masculino.addActionListener(new java.awt.event.ActionListener() {
+        genero.setEditable(true);
+        genero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hombre", "Mujer" }));
+        genero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MasculinoActionPerformed(evt);
+                generoActionPerformed(evt);
             }
         });
 
@@ -78,7 +78,7 @@ public class jfMenuPrincipal extends javax.swing.JFrame {
                             .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Masculino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(genero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton1))))
                 .addContainerGap(96, Short.MAX_VALUE))
@@ -93,9 +93,9 @@ public class jfMenuPrincipal extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
-                    .addComponent(Masculino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(genero, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addContainerGap(159, Short.MAX_VALUE))
@@ -107,22 +107,35 @@ public class jfMenuPrincipal extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //ENTRADA:
         String nombre = jTextField1.getText();
+        //genero.getSelectedItem().toString();
+        String itemSeleccionado = (String) genero.getSelectedItem();
+        
+            
         
         
-        JOptionPane.showMessageDialog(this, "Bienvenido " + nombre + "Sus datos han sido ingresados correctamente");
+            
+        
+        
+            
+        
+        
+        
+        JOptionPane.showMessageDialog(this, "Bienvenido " + nombre + ". Sus datos han sido ingresados correctamente");
+        
         
         dispose();
         
         jfMenuPokimon mpo = new jfMenuPokimon();
+        mpo.setVisible(true);
         
         
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void MasculinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MasculinoActionPerformed
+    private void generoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_MasculinoActionPerformed
+    }//GEN-LAST:event_generoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,7 +173,7 @@ public class jfMenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> Masculino;
+    private javax.swing.JComboBox<String> genero;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
