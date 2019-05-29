@@ -102,19 +102,14 @@ public class jfMenuPokimon2 extends javax.swing.JFrame {
                         .addComponent(jLabel4)
                         .addGap(48, 48, 48))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
+                        .addGap(129, 129, 129)
                         .addComponent(jButton1)
-                        .addGap(114, 114, 114)
-                        .addComponent(jButton2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2)
+                        .addGap(129, 129, 129)
                         .addComponent(jButton3)
-<<<<<<< HEAD
-                        .addGap(88, 88, 88))))
-            .addGroup(layout.createSequentialGroup()
-=======
-                        .addGap(97, 97, 97))))
+                        .addGap(77, 77, 77))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
->>>>>>> f5eacc0c508e1fd20bb9668e3446d09041cbd887
                 .addGap(67, 67, 67)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -155,7 +150,7 @@ public class jfMenuPokimon2 extends javax.swing.JFrame {
                             .addComponent(jButton3)))
                     .addComponent(jLabel4)
                     .addComponent(jLabel5))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
