@@ -18,6 +18,10 @@ public class jfMenuPrincipal extends javax.swing.JFrame {
      */
     public jfMenuPrincipal() {
         initComponents();
+        genero.addItem("Hombre");
+        genero.addItem("Mujer");
+        
+        
     }
 
     /**
@@ -44,6 +48,17 @@ public class jfMenuPrincipal extends javax.swing.JFrame {
 
         jLabel2.setText("Nombres:");
 
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField1KeyTyped(evt);
+            }
+        });
+
         jButton1.setFont(new java.awt.Font("Tahoma", 3, 8)); // NOI18N
         jButton1.setText("INICIAR SESIÓN");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -55,7 +70,11 @@ public class jfMenuPrincipal extends javax.swing.JFrame {
         jLabel3.setText("Sexo:");
 
         genero.setEditable(true);
-        genero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hombre", "Mujer" }));
+        genero.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                generoItemStateChanged(evt);
+            }
+        });
         genero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 generoActionPerformed(evt);
@@ -106,36 +125,51 @@ public class jfMenuPrincipal extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //ENTRADA:
+        
         String nombre = jTextField1.getText();
-        //genero.getSelectedItem().toString();
-        String itemSeleccionado = (String) genero.getSelectedItem();
-        
+            String gn = (String)genero.getSelectedItem();
+        if (gn.equals("Hombre"))
+        {
+            JOptionPane.showMessageDialog(this, "Bienvenido " + nombre + ". Sus datos han sido ingresados correctamente");
+            dispose();
+            jfMenuPokimon mpo = new jfMenuPokimon();
+            mpo.setVisible(true);
             
+        }
+        if (gn.equals("Mujer"))
+        {
+            JOptionPane.showMessageDialog(this, "Bienvenida " + nombre + ". Sus datos han sido ingresados correctamente");
+            dispose();
+            jfMenuPokimon2 mpa = new jfMenuPokimon2();
+            mpa.setVisible(true);
+        }
         
         
-            
-        
-        
-            
-        
-        
-        
-        JOptionPane.showMessageDialog(this, "Bienvenido " + nombre + ". Sus datos han sido ingresados correctamente");
-        
-        
-        dispose();
-        
-        jfMenuPokimon mpo = new jfMenuPokimon();
-        mpo.setVisible(true);
-        
-        
-        
-        
+    
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void generoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generoActionPerformed
-        // TODO add your handling code here:
+        
+       
     }//GEN-LAST:event_generoActionPerformed
+
+    private void generoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_generoItemStateChanged
+        
+    }//GEN-LAST:event_generoItemStateChanged
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+        char validar = evt.getKeyChar();
+        if (Character.isDigit(validar)){
+            getToolkit().beep();
+            evt.consume();
+            
+            JOptionPane.showMessageDialog(rootPane, "Ingresar solo letras");
+        }
+    }//GEN-LAST:event_jTextField1KeyTyped
 
     /**
      * @param args the command line arguments
