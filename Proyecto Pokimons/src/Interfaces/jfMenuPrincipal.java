@@ -12,6 +12,8 @@ import javax.swing.JOptionPane;
  * @author alumno
  */
 public class jfMenuPrincipal extends javax.swing.JFrame {
+    
+    public String nombre;
 
     /**
      * Creates new form jfMenuPrincipal
@@ -20,9 +22,10 @@ public class jfMenuPrincipal extends javax.swing.JFrame {
         initComponents();
         genero.addItem("Hombre");
         genero.addItem("Mujer");
-        
-        
+   
     }
+        
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -146,21 +149,19 @@ public class jfMenuPrincipal extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //ENTRADA:
         
-        String nombre = jTextField1.getText();
-            String gn = (String)genero.getSelectedItem();
+        nombre = jTextField1.getText();
+        String gn = (String)genero.getSelectedItem();
         if (gn.equals("Hombre"))
         {
             JOptionPane.showMessageDialog(this, "Bienvenido " + nombre + ". Sus datos han sido ingresados correctamente");
-            dispose();
-            jfMenuPokimon mpo = new jfMenuPokimon();
+            jfMenuPokimon mpo = new jfMenuPokimon(this);
             mpo.setVisible(true);
             
         }
         if (gn.equals("Mujer"))
         {
             JOptionPane.showMessageDialog(this, "Bienvenida " + nombre + ". Sus datos han sido ingresados correctamente");
-            dispose();
-            jfMenuPokimon2 mpa = new jfMenuPokimon2();
+            jfMenuPokimon2 mpa = new jfMenuPokimon2(this);
             mpa.setVisible(true);
         }
         
