@@ -27,9 +27,9 @@ public class jfMenuPokimon extends javax.swing.JFrame {
         
     }
     
-    public jfMenuPokimon(jfMenuPrincipal nombrep){
+    public jfMenuPokimon(jfMenuPrincipal persona){
         initComponents();
-        this.persona = nombrep;
+        this.persona = persona;
         
         jLabel10.setText(persona.nombre);
     }
