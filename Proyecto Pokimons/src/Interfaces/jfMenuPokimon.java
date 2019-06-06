@@ -185,19 +185,31 @@ public class jfMenuPokimon extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String nombrep = JOptionPane.showInputDialog("Ingrese el nombre de su pokimon:");
         
-        JOptionPane.showMessageDialog(this, "Felcidades entrenador. Has escogido a un pokemon de tipo AGUA");
-        dispose();
+        
+        jButton2.setEnabled(false);
+        jButton3.setEnabled(false);
+        
+        
+        if ((nombrep == null) || (nombrep.isEmpty())){
+            JOptionPane.showMessageDialog(this, "Has escogido a un pokemon de tipo AGUA. Dale la bienvenida a Squirtle." );
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "Has escogido a un pokemon de tipo AGUA. Dale la bienvenida a " + nombrep);
+        }
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         JOptionPane.showMessageDialog(this, "Felcidades entrenador. Has escogido a un pokemon de tipo FUEGO");
-        dispose();
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         JOptionPane.showMessageDialog(this, "Felcidades entrenador. Has escogido a un pokemon de tipo HIERBA");
-        dispose();
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
