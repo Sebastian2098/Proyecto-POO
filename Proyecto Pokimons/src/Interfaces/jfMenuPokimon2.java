@@ -5,6 +5,7 @@
  */
 package Interfaces;
 
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,6 +15,7 @@ import javax.swing.JOptionPane;
 public class jfMenuPokimon2 extends javax.swing.JFrame {
 
     public jfMenuPrincipal persona;
+    
     
     
     public jfMenuPokimon2() {
@@ -211,6 +213,8 @@ public class jfMenuPokimon2 extends javax.swing.JFrame {
         else {
             JOptionPane.showMessageDialog(this, "Has escogido a un pokemon de tipo AGUA. Dale la bienvenida a " + nombrep);
         }
+        
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -227,6 +231,7 @@ public class jfMenuPokimon2 extends javax.swing.JFrame {
         else {
             JOptionPane.showMessageDialog(this, "Has escogido a un pokemon de tipo AGUA. Dale la bienvenida a " + nombrep);
         }
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
