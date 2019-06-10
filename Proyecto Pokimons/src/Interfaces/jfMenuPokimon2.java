@@ -168,7 +168,7 @@ public class jfMenuPokimon2 extends javax.swing.JFrame {
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton2)
                             .addComponent(jButton3)))
                     .addGroup(layout.createSequentialGroup()
@@ -182,18 +182,51 @@ public class jfMenuPokimon2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        JOptionPane.showMessageDialog(this, "Felcidades entrenadora. Has escogido a un pokemon de tipo AGUA");
-        dispose();
+        String nombrep = JOptionPane.showInputDialog("Ingrese el nombre de su pokimon:");
+        
+        jButton2.setEnabled(false);
+        jButton3.setEnabled(false);
+        
+        
+        if ((nombrep == null) || (nombrep.isEmpty())){
+            
+            JOptionPane.showMessageDialog(this, "Has escogido a un pokemon de tipo AGUA. Dale la bienvenida a Squirtel." );
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "Has escogido a un pokemon de tipo AGUA. Dale la bienvenida a " + nombrep);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        JOptionPane.showMessageDialog(this, "Felcidades entrenadora. Has escogido a un pokemon de tipo FUEGO");
-        dispose();
+        String nombrep = JOptionPane.showInputDialog("Ingrese el nombre de su pokimon:");
+        
+        jButton2.setEnabled(false);
+        jButton3.setEnabled(false);
+        
+        
+        if ((nombrep == null) || (nombrep.isEmpty())){
+            
+            JOptionPane.showMessageDialog(this, "Has escogido a un pokemon de tipo AGUA. Dale la bienvenida a Cyndaquil." );
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "Has escogido a un pokemon de tipo AGUA. Dale la bienvenida a " + nombrep);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        JOptionPane.showMessageDialog(this, "Felcidades entrenadora. Has escogido a un pokemon de tipo HIERBA");
-        dispose();
+        String nombrep = JOptionPane.showInputDialog("Ingrese el nombre de su pokimon:");
+        
+        jButton1.setEnabled(false);
+        jButton2.setEnabled(false);
+        
+        
+        if ((nombrep == null) || (nombrep.isEmpty())){
+            
+            JOptionPane.showMessageDialog(this, "Has escogido a un pokemon de tipo AGUA. Dale la bienvenida a Chango." );
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "Has escogido a un pokemon de tipo AGUA. Dale la bienvenida a " + nombrep);
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
