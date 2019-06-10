@@ -8,7 +8,7 @@ public class Pokimon {
 
     public Pokimon(String nombre, int vida, int nivel) {
         this.nombre = nombre;
-        this.vida = 40*nivel;
+        this.vida = 40 + nivel*5;
         this.nivel = 5;
     }
     
