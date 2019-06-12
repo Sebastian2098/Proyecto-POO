@@ -32,10 +32,10 @@ public class Pokimon {
         String resultado = "";
         
         int ataque = (int) (Math.random() * 5 + 5);        
-        int critico = (int) (Math.random() * 200);
+        int critico = (int) (Math.random() * 100);
         
-        if (critico <= 10) {
-            ataque = (int) (ataque * 2.5);
+        if (critico <= 20) {
+            ataque = (int) (ataque * 2);
         }
         
         contrincante.vida = contrincante.vida - ataque;

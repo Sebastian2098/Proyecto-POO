@@ -20,9 +20,12 @@ public class jfMenuPrincipal extends javax.swing.JFrame {
      */
     public jfMenuPrincipal() {
         initComponents();
+        
         genero.addItem("Hombre");
         genero.addItem("Mujer");
    
+        
+    
     }
         
     
@@ -228,7 +231,7 @@ public class jfMenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> genero;
+    public static javax.swing.JComboBox<String> genero;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
